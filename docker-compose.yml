@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    image: openresty/openresty
+    container_name: openresty
+    volumes:
+      - './nginx/conf/:/usr/local/openresty/nginx/conf/'
+    working_dir: /usr/local/openresty/nginx/sbin/
+    entrypoint: '/usr/local/openresty/nginx/sbin/nginx -g "daemon off;"'
+    ports:
+      - '6699:6699'
+    # entrypoint: /bin/sh
+    # stdin_open: true
+    # tty: true

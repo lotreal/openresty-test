@@ -1,0 +1,7 @@
+## reload
+
+docker exec -it openresty ./nginx -s reload
+
+## ref
+
+- https://moonbingbing.gitbooks.io/openresty-best-practices/content/openresty/work_with_location.html
